@@ -3,6 +3,7 @@
 /* COMMON */
 body {
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 .container {
     font-size: var(--base);
@@ -15,6 +16,7 @@ body {
   width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 h2 {
   margin-bottom: 40px;
@@ -86,11 +88,13 @@ h3 {
 
 /* LAYOUT */
 .main .inner {
-  display: flex;
   padding-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .aside {
-  width: 240px;
+  width: 200px;
+  float: left;
 }
 .aside ul.aside--main {}
 .aside > ul > li {}
@@ -107,7 +111,8 @@ h3 {
 
 /* CONTENT */
 .content {
-  flex: 1;
+  width: calc(100% - 200px);
+  float: right;
 }
 .content .content__title {
   font-size: var(--hm);
@@ -115,8 +120,6 @@ h3 {
 }
 .content-article {
   font-size: var(--bm);
-}
-.content-article:not(:last-of-type) {
   margin-bottom: 80px;
 }
 .content-article .content-article__title {
@@ -124,7 +127,6 @@ h3 {
 }
 
 .content-box {
-  width: 100%;
   background-color: var(--table-header);
   box-sizing: border-box;
   padding: 40px;
@@ -132,13 +134,14 @@ h3 {
 }
 .content-box dl {
   display: flex;
+  line-height: 1.4;
+  align-items: center;
 }
 .content-box dl:not(:last-of-type) {
   margin-bottom: 14px;
-  line-height: 1.4;
 }
 .content-box dl dt {
-  width: 35%;
+  width: 30%;
   font-weight: bold;
   font-size: inherit;
 }
@@ -157,12 +160,14 @@ pre.code-box {
   display: inline-flex;
   align-items: center;
   padding: 10px 30px;
-  height: 40px;
+  min-height: 40px;
   font-family: "Courier New",Courier,monospace;
+  line-height: 1.5;
 }
 pre.code-box:not(:first-of-type) {
   margin-top: 20px;
 }
 pre.code-box code {
   font-size: var(--bm);
+  text-wrap: wrap;
 }

@@ -96,7 +96,7 @@
     </header>
 
     <main class="main">
-      <div class="inner">
+      <div class="inner clearfix">
         <!-- ASIDE -->
         <aside class="aside">
           <ul class="aside--main">
@@ -172,6 +172,74 @@
             <pre class="code-box">
               <code class="code">&#60;meta charset="UTF-8"&#62;</code>
             </pre>            
+          </article>
+
+          <!-- HTTP EQUIV -->
+          <article class="content-article">
+            <h3 class="content-article__title">4. 웹 브라우저가 서버에 명령을 내리는 속성</h3>
+            <pre class="code-box">
+              <code class="code">&#60;meta http-equiv="X-UA-Compatible" content="IE=edge" /&#62;</code>
+            </pre>
+          </article>
+
+          <!-- VIEW PORT -->
+          <article class="content-article">
+            <h3 class="content-article__title">5. 뷰포트</h3>
+            <pre class="code-box">
+              <code class="code">&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;  # PC</code>
+            </pre>
+            <pre class="code-box">
+              <code class="code">&#60;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"&#62;  # MOBILE</code>
+            </pre>
+          </article>
+
+          <!-- SEO -->
+          <article class="content-article">
+            <h3 class="content-article__title">6. SEO(검색엔진최적화)</h3>
+            <pre class="code-box">
+              <code class="code">&#60;meta name="title" content="홈페이지 제목"&#62;</code>
+            </pre>
+            <pre class="code-box">
+              <code class="code">&#60;meta name="keywords" content="대표키워드"&#62;</code>
+            </pre>
+            <pre class="code-box">
+              <code class="code">&#60;meta name="description" content="홈페이지 설명 페이지 정보요약"&#62;</code>
+            </pre>
+            <pre class="code-box">
+              <code class="code">&#60;meta name="author" content="페이지 저자"&#62;</code>
+            </pre>
+          </article>
+
+          <!-- OPEN GRAPH -->
+          <article class="content-article">
+            <h3 class="content-article__title">7. OPEN GRAPH / TWITTER</h3>
+            <pre class="code-box">
+              <code class="code">&#60meta property="og:type" content="website"&#62;
+&#60meta property="og:site_name" content="사이트이름"&#62;
+&#60meta property="og:title" content="title"&#62;
+&#60meta property="og:description" content="where people build software."&#62;
+&#60meta property="og:image" content="이미지경로"&#62;
+&#60meta property="og:url" content="도메인주소"&#62;</code>
+            </pre>
+            <pre class="code-box">
+              <code class="code">&#60meta property="twitter:card" content="summary"&#62;
+&#60meta property="twitter:site" content="사이트이름"&#62;
+&#60meta property="twitter:title" content=타이틀"&#62;
+&#60meta property="twitter:description" content="사이트설명"&#62;
+&#60meta property="twitter:image" content="이미지경로"&#62;
+&#60meta property="twitter:url" content="도메인주소"&#62;</code>
+            </pre>
+          </article>
+
+          <!-- FAVICON -->
+          <article class="content-article">
+            <h3 class="content-article__title">8. Favicon</h3>
+            <pre class="code-box">
+              <code class="code">&#60;link rel="shortcut icon" type="image/x-icon" href="favicon.ico" &#62; 
+#IE root에 파일이 있을경우 생략가능
+&#60;link rel="icon" href="favicon.png"&#62;
+&#60;link rel="apple-touch-icon" href="favicon.png"&#62;</code>
+            </pre>
           </article>
 
         </section>
