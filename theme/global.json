@@ -1,0 +1,108 @@
+{
+  "Spacing": {
+    "8": {
+      "value": 8,
+      "type": "spacing"
+    },
+    "12": {
+      "value": 12,
+      "type": "spacing"
+    },
+    "16": {
+      "value": 16,
+      "type": "spacing"
+    },
+    "20": {
+      "value": 20,
+      "type": "spacing"
+    },
+    "24": {
+      "value": 24,
+      "type": "spacing"
+    },
+    "28": {
+      "value": 28,
+      "type": "spacing"
+    },
+    "32": {
+      "value": 32,
+      "type": "spacing"
+    },
+    "36": {
+      "value": 36,
+      "type": "spacing"
+    },
+    "40": {
+      "value": 40,
+      "type": "spacing"
+    },
+    "44": {
+      "value": 44,
+      "type": "spacing"
+    },
+    "48": {
+      "value": 48,
+      "type": "spacing"
+    },
+    "52": {
+      "value": 52,
+      "type": "spacing"
+    },
+    "56": {
+      "value": 56,
+      "type": "spacing"
+    },
+    "60": {
+      "value": 60,
+      "type": "spacing"
+    },
+    "64": {
+      "value": 64,
+      "type": "spacing"
+    },
+    "baseSpacing": {
+      "value": 4,
+      "type": "spacing"
+    }
+  },
+  "Purple": {
+    "value": "#784590",
+    "type": "color"
+  },
+  "White": {
+    "value": "#ffffff",
+    "type": "color"
+  },
+  "Main": {
+    "Primary": {
+      "value": "#4b77be",
+      "type": "color"
+    }
+  },
+  "Table": {
+    "Header": {
+      "value": "#f3f3f3",
+      "type": "color"
+    }
+  },
+  "Border": {
+    "Gray": {
+      "value": "#dddddd",
+      "type": "color"
+    },
+    "Black": {
+      "value": "#010101",
+      "type": "color"
+    }
+  },
+  "Text": {
+    "Black": {
+      "value": "#010101",
+      "type": "color"
+    },
+    "White": {
+      "value": "#ffffff",
+      "type": "color"
+    }
+  }
+}
