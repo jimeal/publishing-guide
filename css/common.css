@@ -99,14 +99,24 @@ h3 {
 .aside ul.aside--main {}
 .aside > ul > li {}
 .aside > ul > li > a {
+  display: block;
+  margin-bottom: 40px;
+  font-size: var(--base);
+  font-weight: bold;
+}
+.aside ul.aside--sub {}
+.aside ul.aside--sub li {
+  margin-bottom: 20px;
+}
+.aside ul.aside--sub > li > a {
   font-size: var(--bl);
 }
-.aside > ul > li > a.active {
+.aside ul li a.active {
   font-weight: bold;
   color: var(--primary);
 }
-.aside > ul > li:hover > a {
-  border-bottom: 1px solid var(--primary);
+.aside ul.aside--sub > li:hover > a {
+  border-bottom: 1px solid var(--text-black);
 }
 
 /* CONTENT */
@@ -170,4 +180,21 @@ pre.code-box:not(:first-of-type) {
 pre.code-box code {
   font-size: var(--bm);
   text-wrap: wrap;
+}
+.desc {
+  display: block;
+  font-size: var(--bm);
+  line-height: 1.4;
+  margin-bottom: 16px;
+  text-wrap: ;
+}
+.desc-a {
+  text-decoration: underline;
+  color: var(--primary);
+}
+.content__ul {}
+.content__ul li {
+  margin-bottom: 10px;
+  font-size: var(--bl);
+  line-height: 1.5;
 }
