@@ -30,6 +30,22 @@ h4 {
   font-size: var(--base);
   font-weight: bold;
 }
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
 /* HEADER */
 .header {
@@ -102,15 +118,12 @@ h4 {
   width: 200px;
   float: left;
 }
-.aside ul.aside--main {}
-.aside > ul > li {}
 .aside > ul > li > a {
   display: block;
   margin-bottom: 40px;
   font-size: var(--base);
   font-weight: bold;
 }
-.aside ul.aside--sub {}
 .aside ul.aside--sub li {
   margin-bottom: 20px;
 }
@@ -192,13 +205,11 @@ pre.code-box code {
   font-size: var(--bm);
   line-height: 1.4;
   margin-bottom: 16px;
-  text-wrap: ;
 }
 .desc-a {
   text-decoration: underline;
   color: var(--primary);
 }
-.content__ul {}
 .content__ul li {
   margin-bottom: 10px;
   font-size: var(--bl);
@@ -207,6 +218,7 @@ pre.code-box code {
 
 /* TABLE */
 table {
+  width: 100%;
   border-collapse: collapse;
   border-top: 1px solid var(--text-black);
   border-bottom: 1px solid var(--text-black);
@@ -218,7 +230,7 @@ table thead th {
   padding: 10px;
   font-size: var(--bl);
 }
-table thead th:first-of-type {
+table thead th:not(:last-of-type) {
   border-right: 1px solid var(--border-gray);
 }
 table tbody td {
@@ -232,6 +244,26 @@ table tbody td {
 table tbody td:first-of-type {
   text-align: center;
   font-weight: bold;
+}
+table tbody td:not(:last-of-type) {
   border-right: 1px solid var(--border-gray);
 }
 
+.art-section {
+  margin-bottom: 40px;
+}
+.art-section span {
+  font-size: var(--bl);
+}
+.art-section ul{
+  list-style: disc inside;
+}
+.art-section ul li {
+  font-size: var(--bl);
+  margin-bottom: 10px;
+}
+
+.art-section span {
+  line-height: 1.5;
+  font-size: var(--bl);
+}
