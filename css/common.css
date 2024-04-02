@@ -263,7 +263,7 @@ table tbody td:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
-.art-section span {
+.art-section p {
   line-height: 1.5;
   font-size: var(--bl);
 }

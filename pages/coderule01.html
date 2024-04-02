@@ -49,7 +49,7 @@
               <a href="../index.html">기본정책</a>
             </li>
             <li>
-              <a href="./coderule.html" class="active">코드규칙</a>
+              <a href="./coderule01.html" class="active">코드규칙</a>
               <ul class="gnb-nav--sub">
                 <li>
                   <a href="">표준규칙</a>
@@ -62,7 +62,7 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <!-- <li>
               <a href="./responsive.html">반응형</a>
               <ul class="gnb-nav--sub">
                 <li>
@@ -89,7 +89,7 @@
                   <a href="">네임규칙</a>
                 </li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </div>
@@ -109,9 +109,9 @@
                 <li>
                   <a href="./coderule02.html">코드규칙</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="./coderule02.html">네임규칙</a>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
@@ -121,7 +121,7 @@
         <section class="content">
           <h2 class="content__title">표준규칙</h2>
 
-          <!-- 01.기본문서 -->
+          <!-- 01.표준규칙 -->
           <article class="content-article">
             <h3 class="content-article__title">1. Basic</h3>
             <pre class="code-box">
@@ -253,128 +253,6 @@
                 </tr>
               </tbody>
             </table>
-          </article>
-
-          <!-- DTD -->
-          <article class="content-article art-dtd">
-            <h3 class="content-article__title">2. 문서형(Document Type Definition) 선언</h3>
-            <div class="highlight">
-              <pre class="code-box">
-                <code class="code">&#60;!DOCTYPE html&#62;</code>
-              </pre>
-            </div>
-          </article>
-
-          <!-- CHARSET -->
-          <article class="content-article art-charset">
-            <h3 class="content-article__title">3. 언어 / 문자셋(charset) 지정</h3>
-            <pre class="code-box">
-              <code class="code">&#60;html lang="ko"&#62;</code>
-            </pre>
-            <pre class="code-box">
-              <code class="code">&#60;meta charset="UTF-8"&#62;</code>
-            </pre>            
-          </article>
-
-          <!-- HTTP EQUIV -->
-          <article class="content-article">
-            <h3 class="content-article__title">4. http-equiv</h3>
-
-            <p class="desc">웹 브라우저가 서버에 명령을 내리는 속성으로 name 속성을 대신하여 사용될 수 있으며, HTML 문서가 응답 헤더와 함께 웹 서버로부터 웹 브라우저에 전송되었을 때에만 의미를 갖는다.
-              http-equiv 속성이 명시되었으면 content 속성 값 또한 필수이다.</p>
-            <pre class="code-box">
-              <code class="code">&#60;meta http-equiv="X-UA-Compatible" content="IE=edge" /&#62;</code>
-            </pre>
-
-            <pre class="code-box">
-              <code class="code">&#60;meta http-equiv="refresh" content="3; url=이동하고자하는 웹페이지 주소"&#62;</code>
-            </pre>
-
-            <pre class="code-box">
-              <code class="code">&#60;meta http-equiv="Content-Script-Type" content="text/javascript"&#62;</code>
-            </pre>
-
-            <pre class="code-box">
-              <code class="code">&#60;meta http-equiv="Content-Style-Type" content="text/css"&#62;</code>
-            </pre>
-           
-          </article>
-
-          <!-- VIEW PORT -->
-          <article class="content-article">
-            <h3 class="content-article__title">5. 뷰포트</h3>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;  # PC</code>
-            </pre>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"&#62;  # MOBILE</code>
-            </pre>
-          </article>
-
-          <!-- SEO -->
-          <article class="content-article">
-            <h3 class="content-article__title">6. SEO(검색엔진최적화)</h3>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="title" content="홈페이지 제목"&#62;</code>
-            </pre>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="keywords" content="대표키워드"&#62;</code>
-            </pre>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="description" content="홈페이지 설명 페이지 정보요약"&#62;</code>
-            </pre>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="author" content="페이지 저자"&#62;</code>
-            </pre>
-          </article>
-
-          <!-- OPEN GRAPH -->
-          <article class="content-article">
-            <h3 class="content-article__title">7. OPEN GRAPH / TWITTER</h3>
-            <pre class="code-box">
-              <code class="code">&#60meta property="og:type" content="website"&#62;
-&#60meta property="og:site_name" content="사이트이름"&#62;
-&#60meta property="og:title" content="title"&#62;
-&#60meta property="og:description" content="where people build software."&#62;
-&#60meta property="og:image" content="이미지경로"&#62;
-&#60meta property="og:url" content="도메인주소"&#62;</code>
-            </pre>
-            <pre class="code-box">
-              <code class="code">&#60meta property="twitter:card" content="summary"&#62;
-&#60meta property="twitter:site" content="사이트이름"&#62;
-&#60meta property="twitter:title" content=타이틀"&#62;
-&#60meta property="twitter:description" content="사이트설명"&#62;
-&#60meta property="twitter:image" content="이미지경로"&#62;
-&#60meta property="twitter:url" content="도메인주소"&#62;</code>
-            </pre>
-          </article>
-
-          <!-- FAVICON -->
-          <article class="content-article">
-            <h3 class="content-article__title">8. Favicon</h3>
-            <pre class="code-box">
-              <code class="code">&#60;link rel="shortcut icon" type="image/x-icon" href="favicon.ico" &#62; 
-#IE root에 파일이 있을경우 생략가능
-&#60;link rel="icon" href="favicon.png"&#62;
-&#60;link rel="apple-touch-icon" href="favicon.png"&#62;</code>
-            </pre>
-          </article>
-
-          <article class="content-article">
-            <h3 class="content-article__title">9. 숫자로 된 항목을 전화번호로 인식하는걸 방지</h3>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="format-detection" content="telephone=no"&#62;</code>
-            </pre>
-          </article>
-
-          <article class="content-article">
-            <h3 class="content-article__title">10. robot.txt</h3>
-
-            <a href="https://searchadvisor.naver.com/guide/seo-basic-robots" class="desc desc-a">robots.txt 설정하기</a>
-            <pre class="code-box">
-              <code class="code">&#60;meta name="robots" content="index,nofollow"&#62;</code>
-            </pre>
-
           </article>
 
         </section>
