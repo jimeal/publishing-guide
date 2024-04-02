@@ -199,6 +199,7 @@ pre.code-box:not(:first-of-type) {
 pre.code-box code {
   font-size: var(--bm);
   text-wrap: wrap;
+  cursor: pointer;
 }
 .desc {
   display: block;
