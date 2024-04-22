@@ -1,0 +1,97 @@
+@import url(./var.css);
+@import url(./common.css);
+
+.tag {
+  border: 1px dashed var(--text-black);
+  padding: 0 2px;
+  background-color: #eee;
+}
+.aria-section {
+  padding-bottom: 10px;
+}
+.section-ul li .section-blockquote {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -4px;
+  max-width: 876px;
+  line-height: 1.5;
+}
+.section-ul li .section-blockquote p {
+  line-height: 1.7;
+}
+.section-ul li .section-blockquote p.italic {
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.aria-cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: italic;
+}
+.aria-cite a {
+  color: var(--primary);
+  border-bottom: 1px dashed var(--primary);
+}
+.section-ul > li > ul.inside-ul {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.section-ul li dl {
+  display: inline-block;
+  vertical-align: middle;
+}
+.section-ul li dl dt {
+  display: inline-block;
+  font-weight: bold;
+}
+.section-ul li dl dt::after {
+  content: '';
+  display: inline-block;
+  border-right: 1px solid var(--text-black);
+  height: 14px;
+  vertical-align: middle;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+.section-ul li dl dd{
+  display: inline-block;
+}
+.section-ul.v-top li dl {
+  vertical-align: top;
+  display: inline-flex;
+  max-width: 860px;
+}
+.section-ul.v-top li dl dt {}
+.section-ul.v-top li dl dd {
+  word-break: keep-all;
+  vertical-align: top;
+  line-height: 1.7;
+  margin-top: -5px;
+  flex: 1;
+}
+.v-top .aria-cite {
+  margin-top: 0;
+}
+.aria-section-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+.border-dash {
+  border-bottom: 1px dashed var(--text-black);
+}
+
+.aria-section table {}
+.aria-section table tbody td {
+  font-size: 14px;
+}
+.aria-section table tbody td:first-of-type {
+  font-weight: 400;
+  text-align: left;
+}
+.aria-section table tbody td.td-center {
+  text-align: center;
+  vertical-align: middle;
+}

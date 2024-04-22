@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="웹퍼블리싱 가이드">
+  <meta name="keywords" content="웹퍼블리싱 가이드, 퍼블리싱, 웹">
+  <meta name="description" content="">
+  <meta name="author" content="Ha-eunBae">
+  <!-- 숫자로 된 항목을 전화번호로 인식하는걸 방지 -->
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- FAVICON -->
+  <link rel="icon" href="../favicon.png"/>
+  
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="퍼블리싱 가이드">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:description" content="">
+  <title>웹접근성 개요 | 웹퍼블리싱 가이드</title>
+  <!-- 다이나믹 서브젯 웹폰트 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+  <link rel="stylesheet" href="../css/aria.css">
+
+  <script type="module" defer="defer" src="../js/index.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER --> 
+    <header class="header">
+      <div class="inner">
+        <h1 class="logo">
+          <a href="../index.html">웹퍼블리싱 가이드</a>
+        </h1>
+
+        <!-- GMB -->
+        <nav class="gnb-nav">
+          <ul class="gnb-nav--ul">
+            <li>
+              <a href="../index.html">기본정책</a>
+            </li>
+            <li>
+              <a href="./coderule01.html">코드규칙</a>
+              <ul class="gnb-nav--sub">
+                <li>
+                  <a href="./coderule01.html">표준규칙</a>
+                </li>
+                <li>
+                  <a href="./coderule02.html">코드규칙</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./wai-summary.html" class="active">웹접근성</a>
+              <ul class="gnb-nav--sub">
+                <li>
+                  <a href="./wai-summary.html">개요</a>
+                </li>
+                <li>
+                  <a href="./wai-aria.html">WAI-ARIA</a>
+                </li>
+                <li>
+                  <a href="./wai-check.html">역할별 체크리스트</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="inner clearfix">
+        <!-- ASIDE -->
+        <aside class="aside">
+          <ul class="aside--main">
+            <li>
+              <a href="javascript:;">웹접근성</a>
+              <ul class="aside--sub">
+                <li>
+                  <a href="./wai-summary.html">개요</a>
+                </li>
+                <li>
+                  <a href="./wai-aria.html" class="active">WAI-ARIA</a>
+                </li>
+                <li>
+                  <a href="./wai-check.html">역할별 체크리스트</a>
+                </li>
+              </ul>
+            </li>
+            
+          </ul>
+        </aside>
+
+        <!-- 기본정책 -->
+        <section class="content">
+          <h2 class="content__title">WAI-ARIA</h2>
+
+          <!-- 01. HTML -->
+          <article class="content-article">
+            <h3 class="content-article__title">Aria Roles</h3>
+
+            <div class="art-section aria-section">
+              <h4 class="sub-title">TAG Roles</h4>
+              <table>
+                <caption class="sr-only">Aria Tab Roles</caption>
+                <colgroup>
+                  <col width="15%">
+                  <col width="20%">
+                  <col wdith="20%">
+                  <col width="45%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>분류</th>
+                    <th>구분</th>
+                    <th>이름</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="8" class="td-center">양식</td>
+                    <td>입력서식</td>
+                    <td>role="form"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;form&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>자유 형식 입력 텍스트</td>
+                    <td>role="textbox"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="text"&#62;</span>,<span class="tag">&#60;textarea&#62;</span>, <span class="tag">aria-multiline=""</span> 속성으로 줄바꿈 처리 적용</td>
+                  </tr>
+                  <tr>
+                    <td>일반 형식 입력 텍스트</td>
+                    <td>role="input"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="text"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>라디오</td>
+                    <td>role="radio"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="radio"&#62;</span>, 라디오 그룹으로 묶어주어야 함</td>
+                  </tr>
+                  <tr>
+                    <td>체크박스</td>
+                    <td>role=checkbox"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="checkbox"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>선택목록</td>
+                    <td>role="combobox"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;select&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>선택옵션</td>
+                    <td>role="option"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;option&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>슬라이더</td>
+                    <td>role="slider"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="range"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6" class="td-center">표</td>
+                    <td>표</td>
+                    <td>role="table"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;table"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>행그룹</td>
+                    <td>role="rowgroup"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;thead"&#62;</span>, <span class="tag">&#60;tbody"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>행</td>
+                    <td>role="row"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;tr"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>제목 (열)</td>
+                    <td>role="columnheader"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;th scope="col"&#62;</span>, 그리드인 경우 <span class="tag">&#60;aria-colindex=""&#62;</span>와 같이 사용됨</td>
+                  </tr>
+                  <tr>
+                    <td>제목 (행)</td>
+                    <td>role="rowheader"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;th scope="row"&#62;</span>, 그리드인 경우 <span class="tag">&#60;aria-rowindex=""&#62;</span>와 같이 사용됨</td>
+                  </tr>
+                  <tr>
+                    <td>내용</td>
+                    <td>role="cell"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;td&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="5" class="td-center">HTML5</td>
+                    <td>네이게이션</td>
+                    <td>role="navication"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;nav&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>일반섹션</td>
+                    <td>role="section"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;section&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>아티클</td>
+                    <td>role="article"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;article&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>메인컨텐츠</td>
+                    <td>role="main"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;main&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>그래픽요소</td>
+                    <td>role="figure"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;figure&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4" class="td-center">기본요소</td>
+                    <td>버튼</td>
+                    <td>role="button"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;button&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>이미지</td>
+                    <td>role="img"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;img&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>링크</td>
+                    <td>role="link"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;a&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>선</td>
+                    <td>role="separator"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;hr&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3" class="td-center">목록, 정의 요소</td>
+                    <td>목록의 그룹</td>
+                    <td>role="list"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;ul&#62;</span>,  <span class="tag">&#60;ol&#62;</span>, <span class="tag">&#60;dl&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>목록의 단일항목</td>
+                    <td>role="listitem"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;li&#62;</span>,  <span class="tag">&#60;dt&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>데이터리스트</td>
+                    <td>role="listbox"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;datalist&#62;</span>(사파리 미지원 태그)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="10" class="td-center">비슷한 HTML 요소</td>
+                    <td>주요 제목</td>
+                    <td>role="heading"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;h1&#62;</span> ~ <span class="tag">&#60;h6&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>중요한 섹션</td>
+                    <td>role="region"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;section&#62;</span>, 중요한 내용을 포함하는 인식 가능한 섹션</td>
+                  </tr>
+                  <tr>
+                    <td>그리드</td>
+                    <td>role="grid"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;table&#62;</span>, <span class="tag">&#60;aria-colcount=""&#62;</span>와 같이 사용됨</td>
+                  </tr>
+                  <tr>
+                    <td>그리드 내용</td>
+                    <td>role="gridcell"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;td&#62;</span>, 그리드일 경우<span class="tag">&#60;aria-colindex=""&#62;</span>와 같이 사용됨</td>
+                  </tr>
+                  <tr>
+                    <td>정의 제목</td>
+                    <td>role="term"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;dt&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>정의 내용</td>
+                    <td>role="definition"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;dd&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>슬라이더</td>
+                    <td>role="range"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="range"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>스핀버튼</td>
+                    <td>role="spinbutton"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;input type="number"&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>Contentinfo</td>
+                    <td>role="contentinfo"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;footer&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td>보완적인 랜드 마크</td>
+                    <td>role="complementary"</td>
+                    <td>동일한 HTML 요소 <span class="tag">&#60;aside&#62;</span></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4" class="td-center">기타</td>
+                    <td>라디오 그룹</td>
+                    <td>role="radiogroup"</td>
+                    <td>"라디오 그룹"으로 역할 정의</td>
+                  </tr>
+                  <tr>
+                    <td>섹션제목</td>
+                    <td>role="sectionhead"</td>
+                    <td>추상적인 역할</td>
+                  </tr>
+                  <tr>
+                    <td>선택목록</td>
+                    <td>role="select"</td>
+                    <td>추상적인 역할</td>
+                  </tr>
+                  <tr>
+                    <td>텍스트</td>
+                    <td>role="text"</td>
+                    <td>이미지를 텍스트로만 읽도록 사용, 마크업에 의해 분리된 텍스트를 한번에 읽도록 사용</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="art-section aria-section">
+              <h4 class="sub-title">Wiget Roles</h4>
+              <table>
+                <caption class="sr-only">Wiget Roles</caption>
+                <colgroup>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <th width="15%">분류</th>
+                  <th width="20%">구분</th>
+                  <th width="20%">이름</th>
+                  <th width="45%">설명</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="12" class="td-center">기능</td>
+                    <td>탭 메뉴그룹</td>
+                    <td>role="tablist"</td>
+                    <td><span class="tag">&#60;ul&#62;</span>그룹요소에 적용</td>
+                  </tr>
+                  <tr>
+                    <td>탭 메뉴목록</td>
+                    <td>role="presentation"</td>
+                    <td><span class="tag">&#60;li&#62;</span>목록요소에 적용 (시맨틱 마크업 역할을 무효화함)</td>
+                  </tr>
+                  <tr>
+                    <td>탭 메뉴링크</td>
+                    <td>role="tab"</td>
+                    <td><span class="tag">&#60;a&#62;</span>이벤트 요소에 적용</td>
+                  </tr>
+                  <tr>
+                    <td>탭 내용</td>
+                    <td>role="tabpanel"</td>
+                    <td><span class="tag">&#60;div&#62;</span> 콘텐츠 활성화 요소에 적용</td>
+                  </tr>
+                  <tr>
+                    <td>Dialog</td>
+                    <td>role="dialog"</td>
+                    <td>대화 상자는 사용자가 정보를 입력하거나 응답하도록하는 데 가장 자주 사용되는 모달입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>Tooltip</td>
+                    <td>role="tooltip"</td>
+                    <td>요소에 대한 설명을 표시하는 문맥 팝업</td>
+                  </tr>
+                  <tr>
+                    <td>트리목록</td>
+                    <td>role="tree"</td>
+                    <td>축소 및 확장 할 수있는 하위 수준 중첩 그룹을 포함 할 수있는 유형의 목록입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>트리의 옵션 항목</td>
+                    <td>role="treeitem"</td>
+                    <td>트리 항목 요소의 하위 수준 그룹이 포함되어있는 경우 확장되거나 축소 될 수있는 트리 내의 요소입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>트리 그리드</td>
+                    <td>role="treegrid"</td>
+                    <td>트리와 같은 방법으로 행을 확장 및 축소 할 수있는 그리드입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>진행표시</td>
+                    <td>role="progressbar"</td>
+                    <td>오랜 시간이 걸리는 작업의 진행 상태를 표시하는 요소입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>스위치</td>
+                    <td>role="swich"</td>
+                    <td>체크 / 체크되지 않은 값과 반대로 <span class="tab">on</span> / <span class="tab">off</span>값을 나타내는 체크 박스 유형.</td>
+                  </tr>
+                  <tr>
+                    <td>Toolbar</td>
+                    <td>role="toolbar"</td>
+                    <td>컴팩트 한 시각적 형태로 표현 된 일반적으로 사용되는 기능 버튼 또는 컨트롤 모음.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="18" class="td-center">의미</td>
+                    <td>메뉴바</td>
+                    <td>role="menubar"</td>
+                    <td>수평으로 제시되는 메뉴</td>
+                  </tr>
+                  <tr>
+                    <td>메뉴 그룹</td>
+                    <td>role="menu"</td>
+                    <td>선택목록 제공</td>
+                  </tr>
+                  <tr>
+                    <td>메뉴목록</td>
+                    <td>role="menuitem"</td>
+                    <td>선택사항의 옵션으로만 사용되므로 선택된 상태는 적용하지 않음</td>
+                  </tr>
+                  <tr>
+                    <td>메뉴선택</td>
+                    <td>role="menuitemradio"</td>
+                    <td>하나만 선택 할 수 있는 메뉴목록, <span class="tag">aria-checked</span>와 함께 사용됨</td>
+                  </tr>
+                  <tr>
+                    <td>메뉴선택</td>
+                    <td>role="menuitemcheckbox"</td>
+                    <td>여러개 선택 할 수 있는 메뉴목록,  <span class="tag">aria-checked</span>와 함께 사용됨</td>
+                  </tr>
+                  <tr>
+                    <td>스크롤바</td>
+                    <td>role="scrollbar"</td>
+                    <td>영역 내의 내용 스크롤을 제어하는 ​​그래픽 객체입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>상태표시줄</td>
+                    <td>role="status"</td>
+                    <td>상태 역할은 경고에 대해 중요하지 않은 권고 정보를 사용자에게 제공하는 데 사용됩니다.
+                      하지만 반드시 이것이 사용자에게 발표된다는 것을 의미하지는 않습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>Timer</td>
+                    <td>role="timer"</td>
+                    <td>시작 지점에서부터의 경과 시간 또는 끝 지점까지 남은 시간을 나타내는 숫자 카운터가 포함된 라이브 영역 유형입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>Marquee</td>
+                    <td>role="marquee"</td>
+                    <td>중요하지 않은 정보가 자주 변경되는 라이브 영역 유형입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>검색</td>
+                    <td>role="search"</td>
+                    <td>검색 기능</td>
+                  </tr>
+                  <tr>
+                    <td>검색상자</td>
+                    <td>role="searchbox"</td>
+                    <td>검색 기준을 지정하기위한 텍스트 상자 유형입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>경고 메세지</td>
+                    <td>role="alert"</td>
+                    <td>사용자에게 경고하기 위해 메시지를 전달하는 데 사용됩니다. 해당 요소가 활성화 될 때 전달됩니다.</td>
+                  </tr>
+                  <tr>
+                    <td>경고 대화상자</td>
+                    <td>role="alertdialog"</td>
+                    <td>경고 메시지가 들어있는 대화 상자 유형으로, 초기 포커스는 대화 상자의 요소로 이동함.</td>
+                  </tr>
+                  <tr>
+                    <td>배너</td>
+                    <td>role="banner"</td>
+                    <td>페이지 별 콘텐츠가 아닌 사이트 중심 콘텐츠가 대부분 포함 된 배너영역</td>
+                  </tr>
+                  <tr>
+                    <td>수학 표현식</td>
+                    <td>role="math"</td>
+                    <td>수학 표현식을 나타내는 내용</td>
+                  </tr>
+                  <tr>
+                    <td>정적 목차</td>
+                    <td>role="directory"</td>
+                    <td>정적 목차와 같이 그룹 구성원에 대한 참조 목록입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>기사목록</td>
+                    <td>role="feed"</td>
+                    <td>스크롤을 통해 기사의 목록에 추가되거나 제거 될 수있는 기사의 스크롤 가능한 목록</td>
+                  </tr>
+                  <tr>
+                    <td>문서</td>
+                    <td>role="document"</td>
+                    <td>보조 기술 사용자가 읽기 모드로 탐색 할 수있는 콘텐츠가 포함 된 요소입니다.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="12">기타</td>
+                    <td>Landmark</td>
+                    <td>role="tablist"</td>
+                    <td><span class="tab">ul</span>그룹 요소에 적용</td>
+                  </tr>
+                  <tr>
+                    <td>명령</td>
+                    <td>role="command"</td>
+                    <td>조치를 수행하지만 입력 데이터를 수신하지 않는 위젯 형태</td>
+                  </tr>
+                  <tr>
+                    <td>Composite</td>
+                    <td>role="composite"</td>
+                    <td>탐색 가능한 자손 또는 소유된 자식요소를 포함 할 수있는 위젯</td>
+                  </tr>
+                  <tr>
+                    <td>Log</td>
+                    <td>role="log"</td>
+                    <td>새 정보가 의미있는 순서로 추가되고 오래된 정보가 사라질 수 있는 라이브 영역 유형입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>Roletype</td>
+                    <td>role="roletype"</td>
+                    <td>인스턴스를 이해하고 작동시키는 데 사용할 수있는 개념</td>
+                  </tr>
+                  <tr>
+                    <td>어플리케이션</td>
+                    <td>role="application"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>없음</td>
+                    <td>role="none"</td>
+                    <td>내제된 원시적 역할을 매핑시키지 않음</td>
+                  </tr>
+                  <tr>
+                    <td>그룹</td>
+                    <td>role="group"</td>
+                    <td>보조 기술에 의해 페이지 요약이나 목차에 포함되지 않는 사용자 인터페이스 개체 집합입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>노트</td>
+                    <td>role="note"</td>
+                    <td>내용이 소문자이거나 자원의 주요 내용을 보조하는 부분</td>
+                  </tr>
+                  <tr>
+                    <td>구조</td>
+                    <td>role="structure"</td>
+                    <td>문서 구조 요소. 구조적 역할 자체가 모두 접근성 API에 매핑되는 것은 아니지만 보조 기술에 대한 컨텐츠 적응을 지원하거나 위젯 역할을 만드는 데 사용됩니다.</td>
+                  </tr>
+                  <tr>
+                    <td>위젯</td>
+                    <td>role="widget"</td>
+                    <td>그래픽 사용자 인터페이스 (GUI)의 대화 형 구성 요소</td>
+                  </tr>
+                  <tr>
+                    <td>Window</td>
+                    <td>role="window"</td>
+                    <td>브라우저 또는 응용 프로그램 창.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </article>
+          
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -46,7 +46,14 @@ h4 {
   height: 1px;
   margin: -1px;
 }
-
+xmp {
+  padding: 10px 30px;
+  display: inline-block;
+  background-color: var(--text-black);
+  color: var(--border-gray);
+  line-height: 1.5;
+  min-width: 350px;
+}
 /* HEADER */
 .header {
   width: 100%;
@@ -149,7 +156,7 @@ h4 {
 }
 .content-article {
   font-size: var(--bm);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .content-article .content-article__title {
   font-size: var(--hs);
@@ -216,6 +223,9 @@ pre.code-box code {
   font-size: var(--bl);
   line-height: 1.5;
 }
+.border-btm {
+  border-bottom: 1px solid var(--border-gray);
+}
 
 /* TABLE */
 table {
@@ -261,10 +271,10 @@ table tbody td:not(:last-of-type) {
 }
 .art-section ul li {
   font-size: var(--bl);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .art-section p {
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: var(--bl);
 }
